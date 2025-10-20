@@ -1,12 +1,15 @@
+const express = require("express");
+const app = express();
+const logger = require("./logger");
 
-//  Custom Middleware Example
+app.use(logger); // use custom middleware
+app.use(express.json());
 
-// Middleware functions have access to req, res,
-// and next() and can run logic before routes.
+// Sample route
+app.get("/", (req, res) => {
+  res.send("Middleware demo successful!");
+});
 
-function logger(req, res, next) {
-  console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);
-  next(); // continue to next middleware/route
-}
-
-module.exports = logger;
+app.listen(5000, () => {
+  console.log("Middleware server running on http://localhost:5000");
+});
