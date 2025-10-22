@@ -1,7 +1,8 @@
 
 
 Middleware = functions that execute **between** the request and response cycle.
-
+in short Middleware are functions that run between receiving a request and sending a response.
+They are useful for logging, authentication, parsing, etc.
 ### Common Uses:
 - Logging requests
 - Parsing body data
