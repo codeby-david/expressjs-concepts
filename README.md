@@ -158,7 +158,7 @@ Example:
 ```jsx
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/mydb")
+mongoose.connect("mongodb URL")
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.error(err));
 ```
@@ -172,9 +172,9 @@ Express is ideal for building REST APIs, where each endpoint corresponds to a CR
 HTTP methods wirh examples
 ```jsx
 GET	->Retrieve data	(example endpoints-> /api/users)
-POST	Create data	(example endpoint-> /api/users)
-PUT/PATCH	Update data	(example endpoint->/api/users/:id)
-DELETE	Remove data (exmaple endpoint->	/api/users/:id)
+POST->Create data	(example endpoint-> /api/users)
+PUT/PATCH->	Update data	(example endpoint->/api/users/:id)
+DELETE->Remove data (exmaple endpoint->	/api/users/:id)
 ```
 Basic Example:
 ```jsx
